@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'Nvcfundbank'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_744A8676E2B44840B27FB3646C14D3B7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D4623E085394D668160831EEE3FB12C }}
           package: .
