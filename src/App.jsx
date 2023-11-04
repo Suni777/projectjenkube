@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import Sign from './componets/Sign'
+import <Sign className="jsx"> </Sign> from './componets/Sign'
 import './App.css'
 
 function App() {
