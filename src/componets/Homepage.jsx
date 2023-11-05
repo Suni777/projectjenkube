@@ -5,7 +5,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Openaccount from './openaccount';
+import Openaccount from './Openaccount';
 import Fundtransfer from './Fundtransfer';
 import Transactiondetails from './Transactiondetails';
 import Addpayee from './Addpayee';
