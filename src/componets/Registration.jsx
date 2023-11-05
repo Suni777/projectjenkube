@@ -19,7 +19,7 @@ const Registration = () => {
           <Input type="email" placeholder="Email" />
           <Input type="password" placeholder="Password" />
           <Input type="password" placeholder="Confirm password" />
-          <Button onClick={RegisterUser}>Register</Button>
+          <Button onClick={RegisterUser} variant="outlined">Register</Button>
         </Stack>
       </Box>
     </div>
