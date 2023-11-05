@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { Button, Input } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Registration = () => {
   const navigate = useNavigate()
@@ -10,7 +10,8 @@ const Registration = () => {
   }
   return (
     <div>
-      <h4>NVC Fund bank</h4>
+      <img src='nvclogo.jpg' />
+      <h4 style={{backgroundColor:"orange"}}>NVC Fund bank</h4>
       <Box sx={{ width: "100%" }}>
         <Stack spacing={2}>
           <Input type="text" placeholder="UserName" />
@@ -19,6 +20,7 @@ const Registration = () => {
           <Input type="password" placeholder="Password" />
           <Input type="password" placeholder="Confirm password" />
           <Button onClick={RegisterUser} variant="outlined">Register</Button>
+          <Link to='/'>Sign In My Account</Link>
         </Stack>
       </Box>
     </div>

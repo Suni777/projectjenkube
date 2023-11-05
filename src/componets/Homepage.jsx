@@ -9,6 +9,7 @@ import Openaccount from './openaccount';
 import Fundtransfer from './Fundtransfer';
 import Transactiondetails from './Transactiondetails';
 import Addpayee from './Addpayee';
+import { useNavigate, Link } from "react-router-dom";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,8 +55,9 @@ export default function Homepage() {
     <Box sx={{ width: '95vw' , height:"95vh"}}>
       <Box>
       <Stack direction="row" spacing={2}>
+      <img src='nvclogo.jpg' style={{width:'30px', height:'30px'}} />
       <h4>Welcome to NVC Fund Bank</h4>
-      <p>For Support/Complaints <a href="helpdesk@nvcbank.com">helpdesk@nvcbank.com</a> </p>
+      <p textAlign='right' >For Support/Complaints <a href="helpdesk@nvcbank.com">helpdesk@nvcbank.com</a> </p>
       </Stack>
   
       </Box>

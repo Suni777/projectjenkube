@@ -11,14 +11,14 @@ const Fundtransfer = () => {
    
     <Grid container spacing={2}>
     <Grid item xs={3}>
-      <b>From :</b><DropdownList name={accountList.name} mobile={accountList.mobile}/> 
+      <b>From :</b><DropdownList name={accountList.name || 'NA'} mobile={accountList.mobile || 'NA'}/> 
    
     </Grid>
     <Grid item xs={3}> 
     <Input type="text" placeholder="amount" />
       </Grid>
     <Grid item xs={4}> 
-      <b>To : </b> <DropdownList name={benificaryList.name} mobile={benificaryList.mobile}/> 
+      <b>To : </b> <DropdownList name={benificaryList.name || 'NA'} mobile={benificaryList.mobile || 'NA'}/> 
       </Grid>
     <Grid item xs={2}> 
     <Button onClick={transfer} variant="outlined">Transfer</Button>
