@@ -14,7 +14,6 @@ const Registration = () => {
       <Box sx={{ width: "100%" }}>
         <Stack spacing={2}>
           <Input type="text" placeholder="UserName" />
-          <Input type="text" placeholder="Account Number" />
           <Input type="text" placeholder="Mobile Number" />
           <Input type="email" placeholder="Email" />
           <Input type="password" placeholder="Password" />
