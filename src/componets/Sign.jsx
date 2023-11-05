@@ -10,7 +10,8 @@ const Sign = () => {
   }
   return (
     <div>
-      <h4>NVC Fund bank</h4>
+      <img src='nvclogo.jpg' />
+      <h4 style={{backgroundColor:"orange"}}>NVC Fund bank</h4>
       <Box sx={{ width: "100%" }}>
         <Stack spacing={2}>
           <Input type="text" placeholder="username" />

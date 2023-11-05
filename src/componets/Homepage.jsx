@@ -5,6 +5,10 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
+import Openaccount from './openaccount';
+import Fundtransfer from './Fundtransfer';
+import Transactiondetails from './Transactiondetails';
+import Addpayee from './Addpayee';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -47,7 +51,7 @@ export default function Homepage() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '95vw' , height:"95vh"}}>
       <Box>
       <Stack direction="row" spacing={2}>
       <h4>Welcome to NVC Fund Bank</h4>
@@ -64,16 +68,16 @@ export default function Homepage() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-      Open Account
+        <Openaccount/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-      Add Benificary
+      <Addpayee/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-      Fund Transfer
+      <Fundtransfer/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
-      Statement
+      <Transactiondetails/>
       </CustomTabPanel>
     </Box>
   );

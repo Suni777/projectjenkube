@@ -1,8 +1,13 @@
-import React from 'react'
+import { Button, Grid,Input } from "@mui/material";
 
 const Transactiondetails = () => {
+  const getStatement = ()=>{
+
+  }
   return (
-    <div>Transactiondetails</div>
+    <>
+    <Button onClick={getStatement} variant="outlined">Get Statement</Button>
+    </>
   )
 }
 
