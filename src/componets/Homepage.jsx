@@ -1,15 +1,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
 import Openaccount from './Openaccount';
 import Fundtransfer from './Fundtransfer';
 import Transactiondetails from './Transactiondetails';
 import Addpayee from './Addpayee';
 import { useNavigate, Link } from "react-router-dom";
+import { Button, Box, Stack, Typography, Tab, Tabs } from '@mui/material';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,18 +42,24 @@ function a11yProps(index) {
 
 export default function Homepage() {
   const [value, setValue] = React.useState(0);
-
+  const userData = JSON.parse(localStorage.getItem('user'))
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const navigate = useNavigate()
+  const logout = ()=>{
+    navigate('/')
+  }
 
   return (
     <Box sx={{ width: '95vw' , height:"95vh"}}>
       <Box>
       <Stack direction="row" spacing={2}>
-      <img src='nvclogo.jpg' style={{width:'30px', height:'30px'}} />
-      <h4>Welcome to NVC Fund Bank</h4>
-      <p textAlign='right' >For Support/Complaints <a href="helpdesk@nvcbank.com">helpdesk@nvcbank.com</a> </p>
+      <img  src='nvclogo.jpg' style={{width:'30px', height:'30px'}} />
+      <h4>Welcome to NVC Fund Bank <span style={{color:'green'}}> {userData.username.toUpperCase() || 'USER'}!</span></h4>
+      <p>For Support/Complaints <a href="helpdesk@nvcbank.com">helpdesk@nvcbank.com</a> </p>
+      <p></p>
+      <Button onClick={logout}  variant="contained" color="error">Logout</Button>
       </Stack>
   
       </Box>

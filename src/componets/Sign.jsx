@@ -1,12 +1,18 @@
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import { Button, Input } from "@mui/material";
+import {useState} from 'react'
+import { Button, Input,Stack,Box } from "@mui/material";
 import { useNavigate, Link } from "react-router-dom";
 
 const Sign = () => {
+  const [signInDetails, setSignInDetails] = useState([])
   const navigate = useNavigate()
   const signIn = ()=>{
-    navigate('/dashboard')
+    if(signInDetails.username && signInDetails.password){
+      localStorage.setItem('user',JSON.stringify(signInDetails))
+      navigate('/dashboard')
+    }else{
+      alert('Invalid credentials')
+    }
+    
   }
   return (
     <div>
@@ -14,8 +20,15 @@ const Sign = () => {
       <h4 style={{backgroundColor:"orange"}}>NVC Fund bank</h4>
       <Box sx={{ width: "100%" }}>
         <Stack spacing={2}>
-          <Input type="text" placeholder="username" />
-          <Input type="password" placeholder="password" />
+          <Input type="text" placeholder="username" 
+          onChange={e=>setSignInDetails(pre=>({...pre,
+            username:e.target.value}))}  
+            />
+          <Input type="password" 
+          placeholder="password" 
+          onChange={e=>setSignInDetails(pre=>({...pre,
+            password:e.target.value}))}  
+          />
           <Button onClick={signIn} variant="outlined">Sign in</Button>
         </Stack>
         <br/>
