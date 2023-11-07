@@ -10,9 +10,14 @@ const Registration = () => {
   }
   return (
     <div>
-      <img src='nvclogo.jpg' />
-      <h4 style={{backgroundColor:"orange"}}>NVC Fund bank</h4>
-      <Box sx={{ width: "100%" }}>
+       <div style={{display:'flex'}}>
+        <div>
+          <img src="dbank.png" alt="dbank" srcset="" />
+        </div> 
+       <div>
+       <Box sx={{ width: "100%", margin:'20px' }}>
+        <img src='nvclogo.jpg' />
+       <h4 style={{backgroundColor:"orange"}}>NVC Fund bank</h4>
         <Stack spacing={2}>
           <Input type="text" placeholder="UserName" />
           <Input type="text" placeholder="Mobile Number" />
@@ -23,6 +28,8 @@ const Registration = () => {
           <Link to='/'>Sign In My Account</Link>
         </Stack>
       </Box>
+       </div>
+       </div>      
     </div>
   );
 };

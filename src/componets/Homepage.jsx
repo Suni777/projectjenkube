@@ -52,7 +52,7 @@ export default function Homepage() {
   }
 
   return (
-    <Box sx={{ width: '95vw' , height:"95vh"}}>
+    <Box sx={{ width: '95vw' , height:"95vh", margin:'20px'}}>
       <Box>
       <Stack direction="row" spacing={2}>
       <img  src='nvclogo.jpg' style={{width:'30px', height:'30px'}} />

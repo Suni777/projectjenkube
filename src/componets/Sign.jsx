@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { Button, Input,Stack,Box } from "@mui/material";
+import { Button, Input,Stack,Box, Grid } from "@mui/material";
 import { useNavigate, Link } from "react-router-dom";
 
 const Sign = () => {
@@ -15,10 +15,15 @@ const Sign = () => {
     
   }
   return (
-    <div>
-      <img src='nvclogo.jpg' />
+    <>
+    <div style={{display:'flex'}}>
+ <div>
+ <img src="bank.jpg" alt="bank" srcset="" style={{width:'60vw'}} />
+ </div>
+ <div style={{ margin:'20px', padding:'30px'}}>
+ <Box sx={{ width: "100%" }}>
+       <img src='nvclogo.jpg' />
       <h4 style={{backgroundColor:"orange"}}>NVC Fund bank</h4>
-      <Box sx={{ width: "100%" }}>
         <Stack spacing={2}>
           <Input type="text" placeholder="username" 
           onChange={e=>setSignInDetails(pre=>({...pre,
@@ -33,8 +38,10 @@ const Sign = () => {
         </Stack>
         <br/>
         <Link to='/registration'>Register new Account</Link>
-      </Box>
-    </div>
+  </Box> 
+ </div>
+    </div>   
+    </>
   );
 };
 
