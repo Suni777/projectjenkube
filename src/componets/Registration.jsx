@@ -17,7 +17,7 @@ const Registration = () => {
        <div>
        <Box sx={{ width: "100%", margin:'20px' }}>
         <img src='nvclogo.jpg' />
-       <h4 style={{backgroundColor:"orange"}}>NVC Fund bank</h4>
+       <h4 >NVC Fund bank</h4>
         <Stack spacing={2}>
           <Input type="text" placeholder="UserName" />
           <Input type="text" placeholder="Mobile Number" />

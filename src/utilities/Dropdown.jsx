@@ -1,25 +1,28 @@
 import * as React from 'react';
 import {Box,Select, FormControl, MenuItem, InputLabel} from '@mui/material';
 
-export default function DropdownList({name, mobile}) {
+export default function DropdownList({name, mobile,label}) {
   const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
-
+let optionItems = name?.map((itm) =>
+<MenuItem value={itm?.name}>{itm?.name}</MenuItem>
+);
   return (
-    <Box sx={{ minWidth: 120 , maxWidth:250}}>
+    <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Bank</InputLabel>
+        <InputLabel id="demo-simple-select-label">{label}</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={age}
-          label="Bank"
+          label={label}
           onChange={handleChange}
+          style={{width:'300px'}}
         >
-          <MenuItem value={name}>{name} - {mobile}</MenuItem>
+        {optionItems}
         </Select>
       </FormControl>
     </Box>
