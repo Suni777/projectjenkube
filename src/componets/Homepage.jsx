@@ -6,6 +6,7 @@ import Transactiondetails from './Transactiondetails';
 import Addpayee from './Addpayee';
 import { useNavigate, Link } from "react-router-dom";
 import { Button, Box, Stack, Typography, Tab, Tabs } from '@mui/material';
+import AddMoney from './AddMoney';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -67,8 +68,9 @@ export default function Homepage() {
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Open Account" {...a11yProps(0)} />
           <Tab label="Add Benificary" {...a11yProps(1)} />
-          <Tab label="Fund Transfer" {...a11yProps(2)} />
-          <Tab label="Statement" {...a11yProps(3)} />
+          <Tab label="Add Money" {...a11yProps(2)} />
+          <Tab label="Fund Transfer" {...a11yProps(3)} />
+          <Tab label="Statement" {...a11yProps(4)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
@@ -78,9 +80,12 @@ export default function Homepage() {
       <Addpayee/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-      <Fundtransfer/>
+      <AddMoney/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
+      <Fundtransfer/>
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={4}>
       <Transactiondetails/>
       </CustomTabPanel>
     </Box>
