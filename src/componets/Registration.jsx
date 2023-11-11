@@ -9,15 +9,16 @@ const Registration = () => {
     navigate('/')
   }
   return (
-    <div>
-       <div style={{display:'flex'}}>
-        <div>
-          <img src="dbank.png" alt="dbank" srcset="" />
-        </div> 
-       <div>
-       <Box sx={{ width: "100%", margin:'20px' }}>
+    <>
+   <div class="row">
+    <div class="col-8" style={{display: 'block',marginLeft: '0,auto', marginRight: '0,auto'}}>
+      <img src="dbank.png" alt="dbank" srcset="" />
+      </div>
+    <div class="col-4">
+    <div style={{ margin: "20px", padding: "30px" }}>
+    <Box >
         <img src='nvclogo.jpg' />
-       <h4 >NVC Fund bank</h4>
+       {/* <h4 >NVC Fund bank</h4> */}
         <Stack spacing={2}>
           <Input type="text" placeholder="UserName" />
           <Input type="text" placeholder="Mobile Number" />
@@ -28,9 +29,12 @@ const Registration = () => {
           <Link to='/'>Sign In My Account</Link>
         </Stack>
       </Box>
-       </div>
-       </div>      
+      </div>
     </div>
+  </div>
+    
+  
+    </>
   );
 };
 

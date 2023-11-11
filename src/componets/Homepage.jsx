@@ -56,7 +56,7 @@ export default function Homepage() {
       <Box>
       <Stack direction="row" spacing={2}>
       <img  src='nvclogo.jpg' style={{width:'30px', height:'30px'}} />
-      <h4>Welcome to NVC Fund Bank <span style={{color:'green'}}> {userData.username.toUpperCase() || 'USER'}!</span></h4>
+      <h4>Welcome to NVC Fund Bank &nbsp; <span style={{color:'green'}}> {userData?.username.toUpperCase() || 'USER'}!</span></h4>
       <p>For Support/Complaints <a href="helpdesk@nvcbank.com">helpdesk@nvcbank.com</a> </p>
       <p></p>
       <Button onClick={logout}  variant="contained" color="error">Logout</Button>

@@ -3,14 +3,17 @@ import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import AccountHoldersList from "./AccountHoldersList";
 const Openaccount = () => {
-  const [newAccount, setNewAccount] = useState([]);
-  const [storedAccount, setStoredAccount] = useState([]);
+  const [newAccount, setNewAccount] = useState({
+    accno:Math.floor((Math.random()*10)+10000000000000),
+    address:'',
+    email:'',
+    mobile:'',
+    name:'',
+});
+  const [storedAccount, setStoredAccount] = useState(pre=>({...pre,newAccount}));
   console.log(newAccount, "newAccount", storedAccount);
   const RegisterUser = () => {
-    setStoredAccount((pre) => ({
-      ...pre,
-      newAccount,
-    }));
+    setStoredAccount(pre=>({...pre,newAccount}))
     localStorage.setItem("acd", JSON.stringify(newAccount));
     localStorage.setItem("sacd", JSON.stringify(storedAccount));
   };

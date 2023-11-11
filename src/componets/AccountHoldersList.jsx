@@ -1,15 +1,18 @@
 import {CardContent,Typography} from '@mui/material';
  const benificaryList = JSON.parse(localStorage.getItem('acd'))
-
+console.log(benificaryList);
 const AccountHoldersList = () => {
   return (
     <>
     <h4>Account Details</h4>
     <CardContent>
-      <Typography variant="h5" component="div">
-       {benificaryList?.name || "NA"}
+    <Typography sx={{ mb: 1.5 }} color="text.primary">
+       {benificaryList?.accno || "NA"}
       </Typography>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
+      <Typography variant="h5" component="div">
+       {benificaryList?.name.toUpperCase() || "NA"}
+      </Typography>
+      <Typography  color="text.secondary">
       Mobile: {benificaryList?.mobile || "NA"}
       </Typography>
       <Typography variant="body2">

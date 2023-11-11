@@ -24,7 +24,7 @@ const Sign = () => {
             <div style={{ margin: "20px", padding: "30px" }}>
               <Box sx={{ width: "100%" }} className='align-items-center justify-content-center'>
                 <img src="nvclogo.jpg" />
-                <h4 >NVC Fund bank</h4>
+                {/* <h4 >NVC Fund bank</h4> */}
                 <Stack spacing={2}>
                   <Input
                     type="text"
