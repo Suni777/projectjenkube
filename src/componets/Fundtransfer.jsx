@@ -4,6 +4,7 @@ import axios from "axios";
 const benificaryList = JSON.parse(localStorage.getItem('benificary'))
 const accountList = JSON.parse(localStorage.getItem('acd'))
 import countiesList from '../assets/countries.json'
+import Wallet from "./Wallet";
 const Fundtransfer = () => {
   
 const transferToBank = ()=>{
@@ -31,7 +32,9 @@ const transferToBank = ()=>{
   </div>
     <div className="d-flex justify-content-around my-2"> 
     <Button onClick={transferToBank} variant="outlined">Transfer Money</Button>
-      </div>             
+      </div>     
+    <p><strong> NOTE:</strong>  Money will be Debited From Your Account and will be added to NVC Fund Bank Wallet</p>
+
     </div>  
 {/* 
     <Grid container spacing={1}>
@@ -49,7 +52,7 @@ const transferToBank = ()=>{
     <Button onClick={transfer} variant="outlined">Transfer</Button>
       </Grid>      
     </Grid> */}
-
+  <Wallet/>
     
     </>
   )

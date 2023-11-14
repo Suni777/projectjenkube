@@ -72,7 +72,7 @@ const AddMoney = () => {
   return (
     <>
     <Button onClick={displayRazorpay} variant="outlined">Add Money</Button>
-    <p><strong> NOTE:</strong>  Money will be Debited From Your Account and will be added to NVC Fund Bank Wallet</p>
+    {/* <p><strong> NOTE:</strong>  Money will be Debited From Your Account and will be added to NVC Fund Bank Wallet</p> */}
     </>
   )
 }
