@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker
+  labels:
+    app: docker
+  namespace: namespace-workflow-1700121281176
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker
+  template:
+    metadata:
+      labels:
+        app: docker
+    spec:
+      containers:
+        - name: docker
+          image: new12345.azurecr.io/image-workflow-1700121281176:latest
+          ports:
+            - containerPort: 5173
