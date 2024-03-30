@@ -33,5 +33,5 @@ spec:
   type: LoadBalancer
   ports:
   - name: http
-    targetPort: 5176
+    targetPort: 5173
     port: 80
